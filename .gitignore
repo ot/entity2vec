@@ -1,0 +1,12 @@
+build/
+data/
+
+# Python junk
+*.pyc
+
+# Java junk
+.classpath
+.project
+*.jar
+.settings
+target/

@@ -1,0 +1,3 @@
+[submodule "ext/gensim"]
+	path = ext/gensim
+	url = https://github.com/piskvorky/gensim.git
