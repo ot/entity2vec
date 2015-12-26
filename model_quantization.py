@@ -35,7 +35,7 @@ def golomb_bits(v):
 
 def quantize_array(A, q):
     quant_A = (np.abs(A) * q).astype(np.int32)
-    quant_A *= np.sign(A)
+    quant_A *= np.sign(A).astype(np.int32)
 
     dequant_A = np.array(quant_A, dtype=np.float32)
     dequant_A += 0.5 * np.sign(quant_A)
