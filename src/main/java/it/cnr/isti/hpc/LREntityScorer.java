@@ -18,7 +18,7 @@ public class LREntityScorer extends EntityScorer {
 		}
 
 		@Override
-		float compute_score() {
+		public float compute_score() {
 			int n_words = word_counts.length;
 			int word_size = word_model.dimensions();
 			float s = 0;
@@ -36,7 +36,7 @@ public class LREntityScorer extends EntityScorer {
 	}
 
 	@Override
-	ScorerContext create_context(float[] word_vecs, int[] word_counts) {
+	public ScorerContext create_context(float[] word_vecs, int[] word_counts) {
 		return new LRScorerContext(word_vecs, word_counts);
 	}
 

@@ -44,10 +44,10 @@ public abstract class EntityScorer {
 			return score(entity_model.word_id(entity));
 		}
 
-		abstract float compute_score();
+		public abstract float compute_score();
 	}
 	
-	abstract ScorerContext create_context(float[] word_vecs, int[] word_counts);
+	public abstract ScorerContext create_context(float[] word_vecs, int[] word_counts);
 
 	public ScorerContext context(List<String> words) {
 		Multiset<String> counter = TreeMultiset.create();

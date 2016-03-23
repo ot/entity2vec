@@ -33,7 +33,7 @@ public class CentroidEntityScorer extends EntityScorer {
 		}
 		
 		@Override
-		float compute_score() {
+		public float compute_score() {
 			int word_size = centroid_vec.length;
 			return LinearAlgebra.inner(word_size, entity_vec, 0, centroid_vec, 0) / norm;
 		}
@@ -41,7 +41,7 @@ public class CentroidEntityScorer extends EntityScorer {
 	}
 
 	@Override
-	ScorerContext create_context(float[] word_vecs, int[] word_counts) {
+	public ScorerContext create_context(float[] word_vecs, int[] word_counts) {
 		return new CentroidScorerContext(word_vecs, word_counts);
 	}
 

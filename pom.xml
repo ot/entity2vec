@@ -4,7 +4,7 @@
 
     <groupId>it.cnr.isti.hpc</groupId>
     <artifactId>word2vec-compress</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
     <packaging>jar</packaging>
 
     <name>word2vec-compress</name>

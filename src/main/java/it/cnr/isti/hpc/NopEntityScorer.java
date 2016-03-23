@@ -13,13 +13,13 @@ public class NopEntityScorer extends EntityScorer {
 		}
 		
 		@Override
-		float compute_score() {
+		public float compute_score() {
 			return 0;
 		}
 	}
 	
 	@Override
-	ScorerContext create_context(float[] word_vecs, int[] word_counts) {
+	public ScorerContext create_context(float[] word_vecs, int[] word_counts) {
 		return new NopScorerContext(word_vecs, word_counts);
 	}
 
