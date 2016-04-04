@@ -22,9 +22,9 @@ public abstract class EntityScorer {
 	}
 
 	public abstract class ScorerContext {
-		float[] word_vecs;
-		int[] word_counts;
-		float[] entity_vec;
+		protected float[] word_vecs;
+		protected int[] word_counts;
+		protected float[] entity_vec;
 
 		public ScorerContext(float[] word_vecs, int[] word_counts) {
 			this.word_vecs = word_vecs;

@@ -1,7 +1,7 @@
 package it.cnr.isti.hpc;
 
 public class LinearAlgebra {
-	static float inner(int size, float[] v1, int offset1, float[] v2, int offset2) {
+	public static float inner(int size, float[] v1, int offset1, float[] v2, int offset2) {
 		if (size % 4 != 0) {
 			throw new IllegalArgumentException("Vector size must be a multiple of 4");
 		}
